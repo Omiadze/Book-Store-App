@@ -1,5 +1,7 @@
+import { link } from 'fs'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Card = ({ item, onClick }) => {
   console.log('ITEM', item)
@@ -18,22 +20,22 @@ const Card = ({ item, onClick }) => {
 
   return (
     <div className="flex flex-row">
-      <div className="relative max-w-sm min-w-[300px] bg-white shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer">
+      <div className="relative max-w-sm min-w-[250px] bg-white shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer">
         <div className="overflow-x-hidden rounded-2xl relative">
           <div className="relative text-center">
             <img
-              className="h-[400px] w-[285px] rounded-2xl object-cover "
+              className="h-[340px] w-[250px] rounded-2xl object-cover "
               src={item.image}
               alt={item.title}
             />
 
-            <div className="absolute inset-0 bg-black opacity-0 rounded-2xl transition-opacity duration-300 hover:opacity-80 flex justify-center">
+            <div className="absolute inset-0 bg-blue opacity-0 rounded-2xl transition-opacity duration-300 hover:opacity-85 flex justify-center">
               <button
-                className=" absolute bottom-6  bg-white py-2 px-4 rounded-lg shadow-md text-black-800   duration-300 "
+                className=" absolute bottom-6  bg-lime py-2 px-4 rounded-lg shadow-md text-black text-lg duration-300 "
                 onClick={() => {
                   setdetailedItem(item)
                   setTimeout(() => {
-                    navigate('/description')
+                    navigate(`/description/${item.id}`)
                   }, 0)
                   console.log('More information button clicked')
                 }}

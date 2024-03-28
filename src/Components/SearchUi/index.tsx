@@ -2,7 +2,7 @@ import React from 'react'
 
 const index = ({ onChange, query }) => {
   return (
-    <div className=" ml-8">
+    <div className="md:ml-8">
       <form className="max-w-md mx-auto ">
         <label
           htmlFor="default-search"

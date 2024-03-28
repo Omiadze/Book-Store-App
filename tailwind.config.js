@@ -9,6 +9,9 @@ module.exports = {
         blue: '#264e70',
         light: '#ffebd3',
       },
+      fontFamily: {
+        DM: ['Mountains of Christmas', 'serif'],
+      },
     },
   },
   plugins: [],

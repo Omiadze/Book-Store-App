@@ -12,30 +12,30 @@ const Welcome = () => {
     navigate('./login')
   }
   return (
-    <div className="bg-lime h-screen flex items-center justify-center">
+    <div className="bg-lime h-screen flex items-center justify-center font-DM">
       <div className="flex flex-wrap justify-center gap-8">
         {welcomeCards.map((card) => (
           <button
             type="button"
             className="focus:outline-none text-white bg-green hover:bg-blue focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-8 py-8  dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
           >
-            <p>{card}</p>
+            <p className="text-xl">{card}</p>
           </button>
         ))}
-        <div className="flex items-center hover:cursor-pointer hover:pl-2">
+        <div className="flex items-center hover:cursor-pointer hover:pl-2 text-blue">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-8 h-8"
             onClick={navToLogin}
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+              d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
             />
           </svg>
         </div>

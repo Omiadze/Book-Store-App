@@ -6,6 +6,8 @@ import { DATA } from '../../books/data'
 import SearchUi from '../../SearchUi'
 import Favotites from '../../FavoritesUi/button'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import LogOut from '../../LogOut'
 
 const DataFetch = () => {
   const navigate = useNavigate()
@@ -76,12 +78,20 @@ const DataFetch = () => {
     setQuery(e.target.value.toLowerCase())
   }
   return (
-    <div className="bg-lime">
-      <div className="flex justify-center pt-8">
-        <SearchUi onChange={handleChange} query={query} />
-        <Favotites />
+    <div className="bg-lime min-h-screen font-DM ">
+      <div className="flex justify-center items-center pt-8 flex-col mb-4 md:flex-row ">
+        <div className="mb-4">
+          <SearchUi onChange={handleChange} query={query} />
+        </div>
+        <div className="mb-4">
+          <Favotites />
+        </div>
+        <div className="mb-4">
+          <LogOut />
+        </div>
       </div>
-      <div className="flex flex-wrap justify-center">
+
+      <div className="flex flex-wrap justify-center pl-8 pr-8">
         {filteredProducts
           .slice(0, more)
           ?.map((item) => (

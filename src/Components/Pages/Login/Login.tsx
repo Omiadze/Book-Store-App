@@ -22,7 +22,7 @@ const Login = () => {
   }
 
   return (
-    <div className="bg-lime flex items-center justify-center flex-col h-screen pt-8 gap-8 md:flex-row md:justify-between  md:pt-0  ">
+    <div className="bg-lime flex items-center justify-center flex-col h-screen pt-8 gap-8 md:flex-row md:justify-between  md:pt-0 font-DM ">
       <img
         className="md:object-cover md:h-screen w-1/2 md:w-1/2"
         src={CoverImg}

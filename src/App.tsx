@@ -1,5 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useParams,
+} from 'react-router-dom'
 import Login from './Components/Pages/Login/Login'
 import Home from './Components/Pages/Home/Home'
 import Description from './Components/Pages/Description/description'
@@ -16,7 +21,7 @@ const App = () => {
             <Route path="/favorites" element={<Favotites />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/description" element={<Description />} />
+            <Route path="/description/:id" element={<Description />} />
           </Routes>
         </Router>
       </div>

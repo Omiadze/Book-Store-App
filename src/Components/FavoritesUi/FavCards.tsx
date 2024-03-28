@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const FavCards = ({ item, onDelete }) => {
   const handleDelete = () => {
-    onDelete(item.id) // Call the onDelete function with the item id
+    onDelete(item.id)
   }
 
   return (
     // <section className="h-screen bg-gray-100 py-12 sm:py-16 lg:py-20">
     // <div className="mx-auto px-4 sm:px-6 lg:px-8">
     // <div className="mx-auto mt-8 max-w-2xl md:mt-12">
+
     <div className="bg-white shadow w-[150px] md:w-[500px] sm:w-[400px]">
       <div className="px-4 py-6 sm:px-8 sm:py-10">
         <div className="flow-root">

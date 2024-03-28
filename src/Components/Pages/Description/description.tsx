@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { itemsTypes } from '../../types/ItemsTypes'
+import { useParams } from 'react-router-dom'
 
 const Description = () => {
+  let { id } = useParams()
   const [book, setbook] = useState<itemsTypes | null>(null)
 
   useEffect(() => {
@@ -10,9 +12,18 @@ const Description = () => {
       setbook(storedBook)
     }
   }, [])
+  const favItems = JSON.parse(localStorage.getItem('favorites'))
+  console.log(book, favItems)
+  const [fav, setFav] = useState(false)
 
+  useEffect(() => {
+    const isBookFavorite = favItems.some((item) => item.id === book?.id)
+    setFav(isBookFavorite)
+  }, [favItems, book])
+
+  // gogo/
   return (
-    <div className="bg-lime">
+    <div className="bg-lime font-DM">
       <div className="min-h-screen  py-6 flex flex-col justify-center sm:py-12">
         <div className="py-3">
           <div className="bg-white shadow-lg border-gray-100 justify-center items-center border sm:rounded-3xl p-8 flex space-x-8 flex-col md:flex-row ">
@@ -23,6 +34,11 @@ const Description = () => {
                 alt=""
               />
             </div>
+            {fav && (
+              <div className="p-4 bg-green rounded-full text-white ">
+                FAVORITE
+              </div>
+            )}
             <div className="flex flex-col md:justify-between md:p-8 md:w-1/2 space-y-4">
               <div className="flex justify-between items-start ">
                 <h2 className="text-3xl font-bold">{book?.title}</h2>
