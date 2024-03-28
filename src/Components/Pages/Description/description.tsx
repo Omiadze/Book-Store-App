@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { itemsTypes } from '../../types/ItemsTypes'
-import { useParams } from 'react-router-dom'
 
 const Description = () => {
-  let { id } = useParams()
   const [book, setbook] = useState<itemsTypes | null>(null)
 
   useEffect(() => {
