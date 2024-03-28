@@ -6,7 +6,7 @@ import { DATA } from '../../books/data'
 import SearchUi from '../../SearchUi'
 import Favotites from '../../FavoritesUi/button'
 import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+
 import LogOut from '../../LogOut'
 
 const DataFetch = () => {
@@ -45,19 +45,6 @@ const DataFetch = () => {
   const handleMoreCards = () => {
     setMore(more + cardsNumber)
   }
-
-  // const handleChange = (event) => {
-  //   const searhQueary = event.target.value.toLowerCase()
-  //   setQuery(searhQueary)
-
-  //   const filteredData = DATA.filter((product) => {
-  //     console.log(product)
-  //     return (
-  //       product.title.toLowerCase().includes(searhQueary) ||
-  //       product.summary.toLowerCase().includes(searhQueary)
-  //     )
-  //   })
-  //   setFilteredProducts(filteredData)
 
   useEffect(() => {
     const handleDebounceSearch = () => {

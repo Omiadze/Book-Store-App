@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const FavCards = ({ item, onDelete }) => {
   const handleDelete = () => {
-    onDelete(item.id)
+    onDelete()
   }
 
   return (

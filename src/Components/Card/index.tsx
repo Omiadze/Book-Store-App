@@ -1,7 +1,5 @@
-import { link } from 'fs'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 
 const Card = ({ item, onClick }) => {
   console.log('ITEM', item)
@@ -13,7 +11,6 @@ const Card = ({ item, onClick }) => {
     localStorage.setItem('dataKey', JSON.stringify(detailedItem))
   }, [detailedItem])
 
-  //
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite)
   }
