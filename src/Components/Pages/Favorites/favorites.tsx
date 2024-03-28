@@ -21,13 +21,13 @@ const Favorites = () => {
 
   return (
     <div className="bg-lime min-h-screen font-DM pb-8 overscroll-x-none overscroll-y-none overflow-x-hidden overflow-y-hidden">
-      <div className="p-8 bg-green text-white mb-4 drop-shadow-xl flex justify-center gap-2">
+      <div className="p-8 bg-green text-white mb-4 drop-shadow-xl flex justify-center gap-2 flex-col items-center">
         <div className="flex">
           <BookSvg />
-          <h1 className="text-center text-3xl">My Favorite Books</h1>
+          <h1 className="text-center text-5xl">My Favorite Books</h1>
           <BookSvg />
         </div>
-        <div className="absolute right-0 sm:bottom-8 bottom-0">
+        <div className="text-xl">
           <LogOut />
         </div>
       </div>
