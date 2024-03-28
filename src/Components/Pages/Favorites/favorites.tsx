@@ -31,9 +31,9 @@ const Favorites = () => {
           <LogOut />
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         {itemIdToRemove !== null && (
-          <div className="w-96 h-64 opacity-95 absolute z-40 bg-blue flex justify-center items-center text-light flex-col rounded-xl">
+          <div className="w-96 h-64 opacity-95 fixed z-40 bg-blue flex justify-center items-center text-light flex-col rounded-xl">
             <p>Do You Want To Delete This Book From Favorites?</p>
             <div className="flex gap-8 mt-8">
               <button
