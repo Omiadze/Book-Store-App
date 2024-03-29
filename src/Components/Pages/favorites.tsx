@@ -17,7 +17,7 @@ const Favorites = () => {
     const updatedItems = favItems.filter((item) => item.id !== itemIdToRemove)
     setFavItems(updatedItems)
     localStorage.setItem('favorites', JSON.stringify(updatedItems))
-    setItemIdToRemove(null) // Reset itemIdToRemove after deletion
+    setItemIdToRemove(null)
   }
 
   return (
