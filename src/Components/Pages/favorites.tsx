@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import FavCards from '../../FavoritesUi/FavCards'
-import BookSvg from '../../bookSvgUi'
-import LogOut from '../../LogOut'
+import FavCards from '../Ui/FavoritesUi/FavCards'
+import BookSvg from '../Ui/bookSvgUi'
+import LogOut from '../LogOut'
 const Favorites = () => {
   const [favItems, setFavItems] = useState(
     JSON.parse(localStorage.getItem('favorites')) || [],
   )
+
   const [itemIdToRemove, setItemIdToRemove] = useState(null)
 
   const handleRemoveItem = (itemId) => {

@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom'
 
 const Welcome = () => {
   const navigate = useNavigate()
+
   const welcomeCards = [
     'Find Your Favorite Authors',
     'Find Your Favorite Books',
     'And Enjoy',
   ]
+
   const navToLogin = () => {
     navigate('./login')
   }

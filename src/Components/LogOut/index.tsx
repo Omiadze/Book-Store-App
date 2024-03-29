@@ -3,10 +3,12 @@ import { useNavigate } from 'react-router-dom'
 
 const Index = () => {
   const Navigate = useNavigate()
+
   const handleLogOutBtn = () => {
     localStorage.removeItem('token')
     Navigate('/login')
   }
+
   return (
     <div>
       <div

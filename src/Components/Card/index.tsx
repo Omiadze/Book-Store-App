@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Card = ({ item, onClick }) => {
-  console.log('ITEM', item)
-
   const navigate = useNavigate()
+
   const [isFavorite, setIsFavorite] = useState(false)
   const [detailedItem, setdetailedItem] = useState({})
+
   useEffect(() => {
     localStorage.setItem('dataKey', JSON.stringify(detailedItem))
   }, [detailedItem])

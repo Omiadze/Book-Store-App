@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { itemsTypes } from '../../types/ItemsTypes'
+import { itemsTypes } from '../types/ItemsTypes'
 
 const Description = () => {
   const [book, setbook] = useState<itemsTypes | null>(null)
+
+  const favItems = JSON.parse(localStorage.getItem('favorites'))
+
+  const [fav, setFav] = useState(false)
 
   useEffect(() => {
     const storedBook: itemsTypes = JSON.parse(localStorage.getItem('dataKey'))
@@ -10,9 +14,6 @@ const Description = () => {
       setbook(storedBook)
     }
   }, [])
-  const favItems = JSON.parse(localStorage.getItem('favorites'))
-  console.log(book, favItems)
-  const [fav, setFav] = useState(false)
 
   useEffect(() => {
     const isBookFavorite = favItems.some((item) => item.id === book?.id)

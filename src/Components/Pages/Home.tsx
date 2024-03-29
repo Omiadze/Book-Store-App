@@ -1,13 +1,13 @@
 import React from 'react'
-import Card from '../../Card'
+import Card from '../Card'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { DATA } from '../../books/data'
-import SearchUi from '../../SearchUi'
-import Favotites from '../../FavoritesUi/button'
+import { DATA } from '../books/data'
+import SearchUi from '../Ui/SearchUi'
+import Favotites from '../Ui/FavoritesUi/button'
 import { useNavigate } from 'react-router-dom'
 
-import LogOut from '../../LogOut'
+import LogOut from '../LogOut'
 
 const DataFetch = () => {
   const navigate = useNavigate()

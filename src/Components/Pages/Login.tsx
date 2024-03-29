@@ -1,6 +1,6 @@
 // src/components/Login.tsx
 import React, { useState } from 'react'
-import CoverImg from '../../../assets/Images/Group 48095919.png'
+import CoverImg from '../../../src/assets/Images/Group 48095919.png'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
